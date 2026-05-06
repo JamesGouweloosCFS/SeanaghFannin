@@ -1,0 +1,397 @@
+/* “Money Is” block — teal disc + stats row (replaces former ribbon) */
+
+.money-block {
+  --money-teal: #1a9e8f;
+  --money-teal-dark: #158a7d;
+  --money-navy: var(--brand-blue-deep, #00284d);
+  width: 100%;
+  overflow: clip;
+}
+
+.money-block__hero {
+  position: relative;
+  min-height: clamp(25.5rem, 66.3vh, 47.6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* Tighter top band — disc sits higher */
+  padding: clamp(1rem, 5vmin, 3.25rem) var(--ribbon-pad-x, 1.5rem) clamp(2.98rem, 8.5vw, 5.95rem);
+  box-sizing: border-box;
+}
+
+.money-block__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Lion / focal art sits right — bias frame so the face stays above the teal disc */
+  object-position: 72% 28%;
+}
+
+.money-block__fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 42%,
+    rgba(255, 255, 255, 0.75) 78%,
+    #fff 100%
+  );
+}
+
+.money-block__circle-wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: min(52.8rem, 98vw);
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(0.35rem, 2.5vh, 1.75rem);
+}
+
+.money-block__circle {
+  position: relative;
+  /* prior 36rem cap +10% */
+  width: min(100%, min(96vw, 39.6rem));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--money-teal) 0%, var(--money-teal-dark) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Vertical inset around the stacked kicker / headline / body / CTA */
+  padding: clamp(2.2rem, 5.6vw, 3.35rem) clamp(1.85rem, 5vw, 2.75rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 40, 77, 0.18), 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: scale(0.94);
+  opacity: 0;
+}
+
+.money-block__circle-inner {
+  /* Shrink-wrap content; circle centers this block — spacing is `gap` only, not stretched */
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* ~half the apparent bands space-evenly was putting between each block */
+  gap: clamp(0.7rem, 2vmin, 1.35rem);
+  text-align: center;
+  position: relative;
+}
+
+.money-block__circle--in {
+  animation: money-circle-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes money-circle-in {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.money-block__kicker {
+  margin: 1.2cm 0 0;
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
+  line-height: 1.25;
+  /* ~20% lighter than previous kicker */
+  font-size: clamp(1.04rem, 2.4vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+/* Rotating headline (shared font sizing) */
+.money-block__headline {
+  margin: 0;
+  font-family: var(--font-serif, Georgia, serif);
+  /* animated headline −10% vs prior step */
+  font-size: clamp(2.39rem, 7.02vw, 3.92rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+/* Raven-style: all phrases in DOM; width fluid so long lines wrap instead of clipping */
+.money-block__headline.money-heading__dynamic-wrapper {
+  position: relative;
+  display: block;
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  /* ~2 wrapped lines max for rotating phrases */
+  min-height: 2.02em;
+  padding: 0 0.15em;
+  box-sizing: border-box;
+}
+
+.money-heading__dynamic-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: manual;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  max-width: 100%;
+  padding: 0 0.2em;
+  box-sizing: border-box;
+}
+
+.money-heading__dynamic-text--inactive {
+  opacity: 0;
+  /* Same axis as active (centred) — only a few px offset so cross-fade doesn’t “jump” */
+  transform: translateY(calc(-50% + 5px));
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 0;
+  transition:
+    opacity 0.42s ease,
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.42s;
+}
+
+.money-heading__dynamic-text--active {
+  opacity: 1;
+  transform: translateY(-50%);
+  visibility: visible;
+  z-index: 1;
+  transition:
+    opacity 0.48s ease,
+    transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s;
+}
+
+.money-block__sub {
+  margin: -0.5cm 0 0;
+  flex: 0 1 auto;
+  width: 100%;
+  text-align: center;
+  /* Two explicit lines (see <br /> in markup); full width of disc text column */
+  max-width: 100%;
+  /* ~20% smaller / lighter than prior subcopy */
+  font-size: clamp(1.28rem, 3.2vw, 1.52rem);
+  font-weight: 400;
+  line-height: 1.38;
+  opacity: 0.95;
+}
+
+.money-block__sub strong {
+  font-weight: 600;
+}
+
+.money-block__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.56rem 1.32rem;
+  border-radius: 999px;
+  background: var(--money-navy);
+  color: #fff !important;
+  font-size: clamp(0.82rem, 2.8vw, 1.31rem);
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  border: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.money-block__cta:hover {
+  background: #001a30;
+  transform: translateY(-1px);
+}
+
+/* Stats row — white band, navy type, centered columns */
+.money-block__stats {
+  background: #fff;
+  padding: clamp(1.75rem, 4vw, 2.75rem) var(--ribbon-pad-x, 1.5rem) clamp(2rem, 5vw, 3rem);
+  box-sizing: border-box;
+}
+
+.money-block__stats-inner {
+  width: 100%;
+  max-width: var(--container-max, 90rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+
+.money-block__stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem clamp(0.65rem, 2vw, 1.25rem);
+  min-width: 0;
+}
+
+.money-block__stat:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: rgba(0, 40, 77, 0.12);
+}
+
+.money-block__value {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-weight: 600;
+  color: var(--money-navy);
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.money-block__label {
+  margin: 0;
+  font-size: clamp(0.78rem, 1.35vw, 0.9rem);
+  line-height: 1.4;
+  color: #3d4f63;
+  text-wrap: balance;
+  max-width: min(22ch, 100%);
+}
+
+.money-block__value--reveal {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.money-block__value--reveal.money-block__value--shown {
+  animation: money-stat-reveal 0.65s ease-out forwards;
+}
+
+.money-block__label--reveal {
+  opacity: 0;
+}
+
+.money-block__label--reveal.money-block__value--shown {
+  animation: money-stat-reveal 0.65s 0.12s ease-out forwards;
+}
+
+@keyframes money-stat-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .money-block__stats-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem 0;
+  }
+
+  .money-block__stat::before {
+    display: none;
+  }
+
+  .money-block__stat:nth-child(n + 3) {
+    border-top: 1px solid rgba(0, 40, 77, 0.1);
+    padding-top: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .money-block__bg {
+    object-position: 68% 32%;
+  }
+
+  .money-block__circle-wrap {
+    margin-top: clamp(0.25rem, 3vh, 1.25rem);
+  }
+
+  .money-block__headline {
+    font-size: clamp(1.76rem, 7.65vw, 2.7rem);
+  }
+
+  .money-block__headline.money-heading__dynamic-wrapper {
+    min-height: 2.12em;
+    margin: 0 auto;
+  }
+
+  .money-block__sub {
+    font-size: clamp(1.1rem, 3.2vw, 1.38rem);
+  }
+
+  .money-block__kicker {
+    font-size: clamp(0.95rem, 2.2vw, 1.12rem);
+  }
+
+  .money-block__cta {
+    font-size: clamp(0.78rem, 2.6vw, 1.15rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .money-block__stats-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .money-block__stat::before {
+    display: none !important;
+  }
+
+  .money-block__stat:not(:first-child) {
+    border-top: 1px solid rgba(0, 40, 77, 0.1);
+    padding-top: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .money-block__circle {
+    transform: none;
+    opacity: 1;
+  }
+
+  .money-block__circle--in {
+    animation: none;
+  }
+
+  .money-heading__dynamic-text--inactive {
+    transition: none;
+    /* Same centred position as active — no slide, only opacity */
+    transform: translateY(-50%);
+  }
+
+  .money-heading__dynamic-text--active {
+    transition: none;
+    transform: translateY(-50%);
+  }
+
+  .money-block__value--reveal,
+  .money-block__label--reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .money-block__value--reveal.money-block__value--shown,
+  .money-block__label--reveal.money-block__value--shown {
+    animation: none;
+  }
+}

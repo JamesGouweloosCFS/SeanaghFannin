@@ -1,0 +1,31 @@
+---
+description: >-
+  Carrick-branded pages in React — mandatory skills, CI deck, workflow, and
+  conflict precedence for this repository.
+alwaysApply: true
+---
+
+## Task: Build or change Carrick-branded pages in React
+
+### Mandatory references (read before designing or coding)
+
+- `.cursor/skills/ui-ux-design/SKILL.md` — layout, UX, WCAG-minded patterns, empty/loading/error states.
+- `.cursor/skills/brand-management/SKILL.md` — tone, vocabulary, logo/color/type/imagery consistency.
+- `context/CI_Guide (1).pptx` — authoritative brand system (extract text/colors/rules as needed).
+- `.cursor/skills/react-development/SKILL.md` — React implementation: components, hooks, framework conventions, performance, testing.
+
+### Workflow
+
+1. **Extract** from the CI deck: primary/secondary/accent typefaces, palette, logo rules, photography style, accent treatments, and any "do not" rules.
+2. **Design** structure and copy using the UI/UX + brand skills; map each section to CI-backed tokens or documented exceptions.
+3. **Implement** in React per the React skill and existing repo structure (no parallel design systems without explicit approval).
+4. **Verify**: contrast and focus states; responsive breakpoints; brand checklist (logo, type, colors, imagery); no placeholder claims that need compliance sign-off.
+
+### Output expectations
+
+- Brief note of **which CI slides or rules** drove key decisions (or "deck silent on X—used brand skill default").
+- React code that is consistent with the codebase and optimized for maintainability, not one-off inline styling unless the project already does that.
+
+### Conflict rule
+
+If CI, brand skill, and code conventions disagree: **CI deck > brand skill wording > repo convention**, unless the user explicitly chooses otherwise in chat.

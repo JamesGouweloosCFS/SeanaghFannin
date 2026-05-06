@@ -1,0 +1,197 @@
+/* Wealthy Her Podcast — Garden Route */
+
+.podcast-page .page-hero h1 {
+  max-width: 22ch;
+}
+
+.podcast-hero__tag {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 500;
+  color: var(--brand-blue);
+  max-width: 36rem;
+  line-height: 1.35;
+}
+
+.wh-podcast-cta-bar {
+  background: linear-gradient(120deg, var(--brand-blue-deep), var(--brand-blue));
+  color: #fff;
+  padding: clamp(1.25rem, 3vw, 1.75rem) 0;
+}
+
+.wh-podcast-cta-bar .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.wh-podcast-cta-bar p {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+.wh-podcast-cta-btn {
+  flex-shrink: 0;
+}
+
+.wh-toc {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+
+.wh-toc a {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand-blue);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.wh-toc a:hover {
+  background: #eef3f9;
+  border-color: #cdd9e6;
+}
+
+.wh-toc-wrap {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-block: clamp(1rem, 2.5vw, 1.35rem);
+  background: var(--surface);
+}
+
+.wh-subhead {
+  margin: 0 0 1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 600;
+  color: var(--brand-blue);
+}
+
+.wh-host {
+  margin: 1.25rem 0 0;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.wh-series__intro {
+  max-width: 46rem;
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.wh-series h2 {
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  margin-bottom: 0.35rem;
+}
+
+.wh-episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.85rem, 2vw, 1.15rem);
+}
+
+.wh-episode {
+  padding: 1.15rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-light);
+  box-shadow: var(--shadow-card);
+}
+
+.wh-episode__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--brand-blue);
+  line-height: 1.35;
+}
+
+.wh-episode .episode-card__meta {
+  margin-bottom: 0.35rem;
+}
+
+.wh-episode__body {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.wh-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wh-related li {
+  margin: 0;
+  padding: 0;
+}
+
+.wh-related__chip {
+  display: inline-block;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(0, 59, 113, 0.08);
+  color: var(--brand-blue-deep);
+}
+
+.wh-footnote {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 48rem;
+}
+
+/* iono.fm mini player (50px chrome) */
+.wh-audio-frame {
+  margin: 0.85rem 0 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface);
+}
+
+.wh-audio-frame__iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+.wh-audio-frame--iono .wh-audio-frame__iframe {
+  min-height: 50px;
+}
+
+.wh-spotify-link {
+  margin: 0.85rem 0 0;
+  font-size: 0.93rem;
+}
+
+.wh-spotify-link__note {
+  color: var(--text-muted);
+}

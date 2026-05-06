@@ -1,0 +1,11 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# Firebase
+.firebase
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+firebase.webapp.config.env
