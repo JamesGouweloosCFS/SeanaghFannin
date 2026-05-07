@@ -10,6 +10,11 @@ import { WealthJourneyPage } from "./pages/WealthJourneyPage";
 import { WealthyHerPodcastPage } from "./pages/WealthyHerPodcastPage";
 import { WhyCarrickPage } from "./pages/WhyCarrickPage";
 import { LandingPage } from "./pages/LandingPage";
+import { PrivacyPolicyPage } from "./pages/legal/PrivacyPolicyPage";
+import { CookiePolicyPage } from "./pages/legal/CookiePolicyPage";
+import { TermsOfServicePage } from "./pages/legal/TermsOfServicePage";
+import { ComplaintsPage } from "./pages/legal/ComplaintsPage";
+import { ConflictOfInterestPage } from "./pages/legal/ConflictOfInterestPage";
 
 export function App() {
   return (
@@ -25,6 +30,11 @@ export function App() {
       <Route path="/wealth-journey" element={<WealthJourneyPage />} />
       <Route path="/wealthy-her-podcast" element={<WealthyHerPodcastPage />} />
       <Route path="/carrick" element={<LandingPage />} />
+      <Route path="/legal/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/legal/cookie-policy" element={<CookiePolicyPage />} />
+      <Route path="/legal/terms-of-service" element={<TermsOfServicePage />} />
+      <Route path="/legal/complaints" element={<ComplaintsPage />} />
+      <Route path="/legal/conflict-of-interest" element={<ConflictOfInterestPage />} />
     </Routes>
   );
 }
