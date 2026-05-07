@@ -58,6 +58,84 @@ The Seanagh Fannin website is being redesigned to serve as a premium financial a
 - Hover transitions: `transition: all 0.2s ease` (default for interactive elements)
 - Color/border transitions: `transition: color 0.2s`, `transition: border-color 0.2s`
 
+### 1.4 Writing & Copywriting Standards
+
+**Voice & Tone:**
+- **Authentic, not corporate**: Use conversational language that feels human and direct
+- **Specific, not vague**: Reference concrete situations, not abstract concepts
+- **Active, not passive**: "She is asking you..." not "It is important that..."
+- **Personal, not generic**: Address the reader directly, acknowledge their specific situation
+- **Confident, not pushy**: State what is true without qualification or hedging
+
+**Copy Patterns to Avoid (AI Detection Red Flags):**
+- ❌ Em-dash overuse: Avoid `—` for list introductions or dramatic pauses. Use periods, commas, or colons instead.
+  - ✅ Good: "The wealth existed. The meetings happened. The decisions were made."
+  - ❌ Bad: "The wealth existed — the meetings happened — the decisions were made"
+  
+- ❌ "In this journey"/"In this guide"/"In this section": Don't meta-reference the page itself
+  - ✅ Good: "Seanagh creates a private, unhurried space to understand your finances."
+  - ❌ Bad: "In this section, we create a private space..."
+  
+- ❌ "For many"/"For most"/"For those": Use specific examples instead of hedging statements
+  - ✅ Good: "When your adviser tells you everything is in order, you may feel reassured but not certain."
+  - ❌ Bad: "For many people, advisers provide reassurance without clarity"
+  
+- ❌ Formulaic bullet points: Avoid `• Label: Explanation` format unless absolutely necessary
+  - ✅ Good: Flowing prose with emphasis through italics or font weight
+  - ❌ Bad: Lists of labels with descriptions (use only for technical specs)
+  
+- ❌ "Ensures"/"Guarantees"/"Provides": Use specific outcomes instead
+  - ✅ Good: "You'll understand how each asset generates income, what the tax implications are..."
+  - ❌ Bad: "This ensures optimal outcomes and guarantees clarity"
+  
+- ❌ Repetitive phrasing: Vary sentence structure and avoid repeated sentence patterns
+  - ✅ Good: Mix of short statements, questions, longer explanations
+  - ❌ Bad: "We offer X. We provide Y. We ensure Z."
+  
+- ❌ All-caps or excessive emphasis: One emphasis type per paragraph maximum
+  - ✅ Good: "The most valuable thing anyone can offer you is *clarity.*" (single word emphasized)
+  - ❌ Bad: "The MOST VALUABLE THING is CLARITY"
+  
+- ❌ "Unlock"/"Leverage"/"Maximize": Business jargon that feels disconnected from real needs
+  - ✅ Good: "Understand how your wealth works" / "Make decisions with confidence"
+  - ❌ Bad: "Unlock the potential of your wealth"
+
+**Content Best Practices:**
+- **Story over data**: Lead with human situations, not statistics
+  - Example: "For many women, wealth has long been a collective endeavour — a dialogue, not a monologue." (from reference design) creates empathy before explanation
+  
+- **Specificity builds trust**: Use real examples with concrete details
+  - Include actual timelines ("45–60 min"), tools ("Your personal Wealth Passport document"), and follow-ups ("Written notes sent within 48 hours")
+  
+- **Questions invite engagement**: Rhetorical questions create space for reflection
+  - "What would I do if I had to manage all of this alone?" feels more real than a statement
+  
+- **Repetition with variation**: Key messages repeat across pages but with different angles
+  - "Clarity" appears throughout but anchored to different contexts (understanding, confidence, certainty, not nodding)
+  
+- **Contrast creates clarity**: Juxtapose opposites to highlight distinctions
+  - "Most advisers manage wealth. Few explain it." / "She deserves to know. So does he."
+  
+- **Remove qualifiers**: Don't soften strong statements
+  - ✅ "Seanagh is the person you call when you're ready to stop hoping — and start knowing."
+  - ❌ "Seanagh might be able to help you start knowing your finances better"
+
+**Punctuation Standards:**
+- Use em-dashes sparingly: Only for strong breaks in thought, not for list separation
+- Commas over dashes: Default to comma for secondary clauses
+- Semicolons for related independent clauses: Shows connection without making a new sentence
+- Ellipses only in quotes: Avoid `...` in body text (use periods instead)
+- One space after periods: Standard modern typography (not two)
+
+**Word Choice Audit for AI Patterns:**
+- Replace "Furthermore" with no connector (let ideas flow)
+- Replace "Additionally" with "Also" or no connector
+- Replace "Ultimately" with "Finally" or just state the conclusion
+- Replace "Explore" with specific verb (understand, review, examine)
+- Replace "Access" with specific action (contact, schedule, receive)
+- Replace "Streamline" with specific outcome (simplify, clarify, save time)
+- Replace "Elevate" with specific improvement (strengthen, develop, deepen)
+
 ---
 
 ## Part 2: Page Structure & Content Alignment
@@ -714,6 +792,209 @@ input:focus, select:focus, textarea:focus {
 - Stage details, promise strip: 1-column from multi-column
 - Buttons: Full width or adjusted sizing
 - Padding/margins: Reduced from 3rem to 1.5rem gutters
+
+---
+
+## Part 9: Design & Development Best Practices
+
+### 9.1 Visual Design Principles
+
+**Hierarchy Through Restraint:**
+- Limit color palette to primary colors + neutrals (no gradient abuse)
+- Use white space strategically; empty space is not wasted space
+- Typography weight and size create hierarchy; minimize color variation for emphasis
+- Gold accent appears intentionally, not everywhere
+
+**Consistency Through Systems:**
+- All borders use the same line color and weight
+- All buttons follow one of three patterns (primary, ghost, dark)
+- All form inputs share identical styling and focus states
+- All spacing uses multiples of the base unit (0.5rem)
+
+**Elegance Through Understatement:**
+- Avoid shadows unless required for layering
+- Borders are thin (0.5px) and subtle
+- Animations are smooth and brief (0.2–0.8s range)
+- Opacity changes are preferred over color changes for subtle emphasis
+
+**Accessibility by Default:**
+- Text contrast ratios meet WCAG AA (4.5:1 for body, 3:1 for large text)
+- Interactive elements have clear focus states (always visible)
+- Form labels are associated with inputs (not placeholder-only)
+- Color is never the only indicator of state (combine with icon, text, or border)
+- Touch targets are minimum 44×44px (button height = 44px)
+
+### 9.2 Responsive Design Standards
+
+**Mobile-First Approach:**
+- Design smallest screen first, add complexity for larger screens
+- Test on real devices, not just browser emulation
+- Breakpoint at 920px is primary; consider secondary breakpoint at 480px for very small phones
+
+**Touch-Friendly Defaults:**
+- Buttons and clickable elements: minimum 44×44px
+- Form inputs: minimum 44px height for easy tapping
+- Spacing between clickable items: minimum 8px
+- Text size on mobile: never smaller than 16px (prevents auto-zoom on iOS)
+
+**Fluid Typography:**
+- Use `clamp()` for responsive font sizes where appropriate
+- Maintain readable line lengths (50–75 characters on desktop)
+- Maintain line height ≥ 1.4 for body text
+
+### 9.3 Form Design Best Practices
+
+**Single Column for All Screens:**
+- Mobile: always single column
+- Desktop: use 2-column grid only for closely related fields (first/last name, email/phone)
+- Wider forms reduce completion rates
+
+**Field Labeling:**
+- All fields must have visible, persistent labels (not floating or hidden)
+- Labels positioned above fields, not inside
+- Optional fields marked as "Optional" (required is default assumption)
+- Error messages inline and red (#c64545 or similar)
+
+**Input Validation:**
+- Validate on blur (not on every keystroke)
+- Show errors after submission attempt or field blur
+- Don't clear form on error (let user correct)
+- Success states optional; focus on helping user progress
+
+**Progress Indication:**
+- Multi-step forms need visible progress bar
+- Show current step number and total (e.g., "Step 2 of 4")
+- Never let user scroll past the progress bar
+- Steps should be reversible (allow back button)
+
+**Call-to-Action Buttons:**
+- Button text describes the action: "Book a conversation" not "Submit"
+- Disabled state must be visually distinct
+- Loading state: show spinner or loading text
+- Success state: show confirmation or redirect
+
+### 9.4 Performance Best Practices
+
+**Image Optimization:**
+- Use WebP format with JPEG fallback
+- Lazy load images below the fold
+- Responsive images: srcset for different screen sizes
+- Never scale large images down in HTML (resize source instead)
+
+**CSS & JavaScript:**
+- CSS: minify, remove unused styles, use system fonts when possible
+- JavaScript: code split by page/feature, defer non-critical scripts
+- Fonts: limit to 2 font families, 4 weights maximum
+- No custom fonts for body text (Roboto is widely available)
+
+**Caching & Delivery:**
+- Set proper cache headers (long expires for static assets)
+- Use CDN for static assets
+- Service worker for offline capability (optional)
+
+**Lighthouse Targets:**
+- Desktop: Performance > 90, Accessibility > 95, Best Practices > 90, SEO > 90
+- Mobile: Performance > 80 (lower due to hardware variation)
+- Core Web Vitals: LCP < 2.5s, FID < 100ms, CLS < 0.1
+
+### 9.5 Copy & Content Standards
+
+**Headline Guidelines:**
+- Clarity first, cleverness second
+- Benefit-focused, not feature-focused
+- Active voice, present tense
+- Scannable: keywords early in headline
+
+**Body Copy Standards:**
+- Sentences: 15–20 words average (vary between short and medium)
+- Paragraphs: 3–4 sentences maximum
+- Line length: 50–75 characters (roughly 10–12 words per line on desktop)
+- Readability: aim for 8th-grade level (Flesch Reading Ease > 60)
+
+**Links & CTAs:**
+- Link text describes destination, not "Click here" or "Learn more"
+- CTA buttons use action verbs: "Book a conversation", "Request your passport"
+- Descriptive: include context if needed ("Book a consultation with Seanagh")
+- Consistent: same action uses same button label site-wide
+
+**Data & Numbers:**
+- Round numbers for readability ("45–60 minutes" not "52 minutes")
+- Use actual ranges for estimates ("2–3 weeks" not "approximately 2 weeks")
+- Always include units (minutes, weeks, R amount, %)
+- Format currency consistently (R X,XXX not Rx,xxx)
+
+### 9.6 Brand Consistency Checklist
+
+**Every page should have:**
+- ✓ Carrick accent triangle (top-right, fixed position)
+- ✓ Navigation with Seanagh Fannin branding
+- ✓ At least one gold accent (border, badge, or highlight)
+- ✓ Serif font for headings (Georgia)
+- ✓ Sans-serif font for body (Roboto)
+- ✓ Consistent button styling (one of three types)
+- ✓ Consistent spacing (multiples of 0.5rem)
+- ✓ Consistent line color (gold at 20% opacity)
+
+**Every form should have:**
+- ✓ Progress indicator (if multi-step)
+- ✓ Consistent field styling
+- ✓ Labels above fields (never placeholder-only)
+- ✓ Clear error messaging
+- ✓ Descriptive button labels
+- ✓ Accessibility attributes (name, aria-label, aria-describedby)
+
+**Every tool should have:**
+- ✓ Clear form-to-result progression
+- ✓ Computed insight (not just raw data)
+- ✓ Actionable recommendation or next step
+- ✓ Ability to save and edit answers
+- ✓ Data aggregation to advisor brief
+
+### 9.7 Testing Checklist (Pre-Launch)
+
+**Functional Testing:**
+- [ ] Form submission works end-to-end
+- [ ] Data persists across page reload
+- [ ] Tool calculations are accurate
+- [ ] Email notifications send correctly
+- [ ] PDF export generates readable output
+
+**Visual Testing:**
+- [ ] Fonts render correctly (Georgia, Roboto available)
+- [ ] Colors display as intended across devices
+- [ ] Responsive breakpoints trigger at correct sizes
+- [ ] No layout shifts or jumping content
+- [ ] Carrick accent and borders render correctly
+
+**Cross-Browser Testing:**
+- [ ] Chrome (latest)
+- [ ] Safari (latest desktop + iOS)
+- [ ] Firefox (latest)
+- [ ] Edge (latest)
+- [ ] Mobile browsers (Safari iOS, Chrome Android)
+
+**Performance Testing:**
+- [ ] Page load time < 3 seconds on 4G
+- [ ] Lighthouse score > 80 (all categories)
+- [ ] No JavaScript errors in console
+- [ ] No network waterfall delays
+- [ ] Images optimized (WebP format checked)
+
+**Accessibility Testing:**
+- [ ] Keyboard navigation works (Tab, Shift+Tab, Enter, Escape)
+- [ ] Focus indicators visible on all interactive elements
+- [ ] Form labels properly associated with inputs
+- [ ] Color contrast ratios meet WCAG AA
+- [ ] Screen reader compatible (test with NVDA or JAWS)
+- [ ] No auto-playing audio or video
+- [ ] Page can be zoomed to 200% without breaking layout
+
+**User Testing:**
+- [ ] 3–5 users test booking form (target: > 80% completion)
+- [ ] 3–5 users test tool workflow (target: > 70% completion)
+- [ ] Collect feedback on clarity and ease of use
+- [ ] Identify missing information or confusing sections
+- [ ] Test with both technical and non-technical users
 
 ---
 
