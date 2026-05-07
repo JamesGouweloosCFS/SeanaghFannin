@@ -3644,12 +3644,27 @@ textarea:focus {
 .sb-field textarea {
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: var(--ink);
   background: #fff;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sb-field input::placeholder,
+.sb-field select::placeholder,
+.sb-field textarea::placeholder {
+  color: var(--ink-soft);
+}
+
+.sb-field input:hover:not(:focus),
+.sb-field select:hover:not(:focus),
+.sb-field textarea:hover:not(:focus) {
+  border-color: var(--gold-lt);
+  background-color: #fafaf8;
 }
 
 .sb-field input:focus,
@@ -3657,11 +3672,51 @@ textarea:focus {
 .sb-field textarea:focus {
   outline: none;
   border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(191, 150, 92, 0.1);
 }
 
 .sb-field textarea {
   resize: vertical;
   font-family: 'Roboto', sans-serif;
+  min-height: 100px;
+}
+
+/* Select styling */
+.sb-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23122741' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.sb-field select option {
+  color: var(--ink);
+  background: #fff;
+  padding: 8px;
+}
+
+.sb-field select:disabled {
+  background-color: var(--cream);
+  cursor: not-allowed;
+  color: var(--ink-soft);
+}
+
+/* Date input styling */
+.sb-field input[type="date"] {
+  position: relative;
+}
+
+.sb-field input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 0;
+  filter: invert(0.3);
+}
+
+.sb-field input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  filter: invert(0);
 }
 
 /* Checkboxes */
