@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import passportImage from "@assets/shutterstock_30275155 1 (1).jpg";
 
 export function SeanaughFanninLanding() {
   return (

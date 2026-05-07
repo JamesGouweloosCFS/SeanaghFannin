@@ -26,7 +26,6 @@ type WorkspaceProps = {
 export function ToolWorkspace({
   stageId,
   toolIndex,
-  toolName,
   profile,
   onUpdate,
 }: WorkspaceProps) {
@@ -94,9 +93,10 @@ function CurrencyInput({
 }: {
   id: string;
   placeholder?: string;
-  value: string | number;
+  value: ToolAnswers[string];
   onChange: (v: string) => void;
 }) {
+  const scalar = Array.isArray(value) ? "" : value;
   return (
     <div className="tool-form__currency">
       <span>R</span>
@@ -105,7 +105,7 @@ function CurrencyInput({
         type="number"
         min="0"
         placeholder={placeholder ?? "0"}
-        value={value || ""}
+        value={scalar || ""}
         onChange={(e) => onChange(e.target.value)}
       />
     </div>

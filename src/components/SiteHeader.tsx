@@ -2,11 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 import { BrandLogo } from "@/components/BrandLogo";
 
 type SiteHeaderProps = {
-  /** When true, in-page anchors target the landing route (for /booking). */
   anchorToLanding?: boolean;
 };
 
-export function SiteHeader({ anchorToLanding = false }: SiteHeaderProps) {
+export function SiteHeader({ anchorToLanding: _anchorToLanding = false }: SiteHeaderProps) {
   const { pathname } = useLocation();
   const isSeanagh = ["/", "/how-it-works", "/for-families", "/property", "/letters", "/booking"].some(
     (path) => pathname === path
@@ -17,6 +16,10 @@ export function SiteHeader({ anchorToLanding = false }: SiteHeaderProps) {
       <div className="container nav-wrap">
         <Link className="brand" to="/" aria-label="Seanagh Fannin home">
           <BrandLogo variant="blue" size="header" />
+          <div className="brand-text">
+            <span className="brand-name">Seanagh <em>Fannin</em></span>
+            <span className="brand-tagline">Financial Clarity</span>
+          </div>
         </Link>
         <nav className="site-nav" aria-label="Primary">
           {isSeanagh ? (

@@ -176,16 +176,13 @@ export function WealthJourneyPage() {
   const [stageEngaged, setStageEngaged] = useState(false);
   const [clientProfile, setClientProfile] = useState<ClientProfile>(emptyProfile());
 
-  const updateProfile = (stageId: string, toolIndex: number, answers: ToolAnswers) => {
+  const updateProfile = (key: string, answers: ToolAnswers) => {
     setClientProfile((prev) => ({
       ...prev,
-      answers: {
-        ...prev.answers,
-        [`${stageId}:${toolIndex}`]: answers,
-      },
-      completedTools: prev.completedTools.includes(`${stageId}:${toolIndex}`)
+      answers: { ...prev.answers, [key]: answers },
+      completedTools: prev.completedTools.includes(key)
         ? prev.completedTools
-        : [...prev.completedTools, `${stageId}:${toolIndex}`],
+        : [...prev.completedTools, key],
     }));
   };
 
