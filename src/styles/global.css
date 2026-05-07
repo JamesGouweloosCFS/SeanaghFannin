@@ -1771,6 +1771,1264 @@ textarea:focus {
   flex-wrap: wrap;
 }
 
+/* ═══ SEANAGH FANNIN PAGES ═══ */
+:root {
+  --gold: #bf965c;
+  --gold-lt: #e5dbce;
+  --gold-pale: #f5f0e6;
+  --ink: #122741;
+  --ink-mid: #1e3a5f;
+  --ink-soft: #5a6e8a;
+  --ink-faint: #a0b0c8;
+  --cream: #F8F9FB;
+  --line: rgba(191, 150, 92, 0.2);
+  --good: #2C6E49;
+}
+
+/* Carrick accent triangle */
+.carrick-accent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 80px 80px 0;
+  border-color: transparent rgba(136, 21, 52, 0.25) transparent transparent;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Seanagh Landing */
+.seanagh-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem 5rem 3rem;
+  border-right: 0.5px solid var(--line);
+  position: relative;
+}
+
+.hero-left::before {
+  content: '';
+  position: absolute;
+  top: 4.5rem;
+  left: 3rem;
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.overline {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding-top: 1.2rem;
+}
+
+.headline {
+  font-family: Georgia, serif;
+  font-size: 54px;
+  font-weight: 300;
+  line-height: 1.08;
+  color: var(--ink);
+  margin: 0 0 0.75rem 0;
+}
+
+.headline em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.subhead {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 1.4rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.eight-words {
+  margin-top: 1.8rem;
+  padding-top: 1.8rem;
+  border-top: 0.5px solid var(--line);
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.eight-words .her {
+  color: var(--ink);
+  font-style: italic;
+}
+
+.eight-words .him {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.2rem;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--gold-lt);
+  border: none;
+  padding: 14px 32px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.btn-ghost {
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+
+.btn-ghost:hover {
+  color: var(--gold);
+}
+
+.btn-ghost svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 3rem 5rem 4rem;
+  background: linear-gradient(135deg, #F5EFE4 0%, var(--cream) 60%);
+}
+
+.passport-card {
+  background: var(--ink);
+  color: var(--gold-lt);
+  padding: 2.8rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.passport-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle at top right, rgba(191, 150, 92, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.card-label {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.75;
+  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
+}
+
+.card-title {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: #dce8f5;
+}
+
+.card-sub {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.65;
+  margin-bottom: 2rem;
+}
+
+.card-divider {
+  height: 0.5px;
+  background: rgba(191, 150, 92, 0.25);
+  margin-bottom: 1.8rem;
+}
+
+.card-quote {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(220, 232, 245, 0.7);
+  font-style: italic;
+}
+
+.card-stamp {
+  position: absolute;
+  bottom: 2rem;
+  right: 2.2rem;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(191, 150, 92, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-stamp-inner {
+  font-size: 7.5px;
+  letter-spacing: 0.1em;
+  color: rgba(191, 150, 92, 0.45);
+  text-align: center;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* Brand Position */
+.brand-position {
+  padding: 2.2rem 3rem;
+  background: var(--gold-pale);
+  border-top: 0.5px solid var(--line);
+  border-bottom: 0.5px solid var(--line);
+}
+
+.bp-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.bp-text {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--ink-mid);
+  font-style: italic;
+  margin: 0;
+}
+
+.bp-text em {
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* Three Pillars */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 0.5px solid var(--line);
+}
+
+.pillar {
+  padding: 2.5rem 2rem;
+  border-right: 0.5px solid var(--line);
+  transition: background 0.25s;
+}
+
+.pillar:last-child {
+  border-right: none;
+}
+
+.pillar:hover {
+  background: rgba(191, 150, 92, 0.04);
+}
+
+.pillar-num {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--gold-lt);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.pillar-title {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.pillar-body {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Footer Bar */
+.footer-bar {
+  padding: 1.4rem 3rem;
+  border-top: 0.5px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bar p {
+  font-size: 11px;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.book-link {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: opacity 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.book-link:hover {
+  opacity: 0.7;
+}
+
+/* How It Works */
+.hiw-hero {
+  padding: 3.5rem 3rem 2.5rem;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.hiw-kicker {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hiw-title {
+  font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.hiw-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hiw-intro {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  max-width: 580px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.hiw-preamble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 2.5rem;
+  border-top: 0.5px solid var(--line);
+}
+
+.hiw-p-block {
+  padding: 2rem 2.5rem;
+  border-right: 0.5px solid var(--line);
+  border-bottom: 0.5px solid var(--line);
+}
+
+.hiw-p-block:nth-child(even) {
+  border-right: none;
+}
+
+.hiw-p-block:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.hiw-p-bridge {
+  grid-column: 1 / -1;
+  border-right: none;
+  background: var(--ink);
+  padding: 1.8rem 2.5rem;
+}
+
+.hiw-p-bridge .hiw-p-text {
+  color: rgba(220, 232, 245, 0.75);
+}
+
+.hiw-p-who {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+
+.hiw-p-text {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.hiw-p-italic {
+  font-style: italic;
+  font-size: 18px !important;
+  color: rgba(220, 232, 245, 0.75) !important;
+}
+
+.hiw-gold {
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* Stages */
+.stages {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  border-bottom: 0.5px solid var(--line);
+  transition: background 0.2s;
+}
+
+.stage:hover {
+  background: rgba(191, 150, 92, 0.02);
+}
+
+.stage-num {
+  padding: 2.5rem 0 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.stage-numeral {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 300;
+  color: var(--gold-lt);
+  line-height: 1;
+}
+
+.stage-line {
+  width: 1px;
+  flex: 1;
+  background: var(--line);
+  margin-left: 15px;
+}
+
+.stage-body {
+  padding: 2.5rem 3rem 2.5rem 2rem;
+  border-left: 0.5px solid var(--line);
+}
+
+.stage-tag {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.stage-heading {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+  margin: 0 0 0.7rem 0;
+}
+
+.stage-text {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  margin: 0 0 1.2rem 0;
+}
+
+.stage-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.detail-chip {
+  background: var(--gold-pale);
+  border: 0.5px solid rgba(191, 150, 92, 0.22);
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--ink-mid);
+  line-height: 1.4;
+}
+
+.detail-chip strong {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+/* Promise Strip */
+.promise-strip {
+  background: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.promise-item {
+  padding: 2rem 2.5rem;
+}
+
+.promise-item:not(:last-child) {
+  border-right: 0.5px solid rgba(191, 150, 92, 0.12);
+}
+
+.promise-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+  margin-bottom: 0.6rem;
+}
+
+.promise-text {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(220, 232, 245, 0.82);
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* HiW CTA */
+.hiw-cta {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.5px solid var(--line);
+}
+
+.hiw-cta p {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.btn-dark {
+  background: var(--ink);
+  color: var(--gold-lt);
+  border: none;
+  padding: 14px 28px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-dark:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* For Families */
+.fam-hero {
+  padding: 3.5rem 3rem 2.5rem;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.fam-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+.fam-kicker {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.fam-title {
+  font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.fam-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.fam-intro {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  font-weight: 300;
+  margin: 0;
+}
+
+.fam-eight {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.fam-eight .her {
+  color: var(--ink-mid);
+}
+
+.fam-eight .him {
+  color: var(--gold);
+}
+
+/* Audiences */
+.audiences {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 0.5px solid var(--line);
+  border-bottom: 0.5px solid var(--line);
+}
+
+.audience {
+  padding: 2.5rem 2rem;
+  border-right: 0.5px solid var(--line);
+  transition: background 0.2s;
+}
+
+.audience:last-child {
+  border-right: none;
+}
+
+.audience:hover {
+  background: rgba(191, 150, 92, 0.03);
+}
+
+.aud-tag {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.aud-heading {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  margin: 0 0 0.6rem 0;
+}
+
+.aud-emotion {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.aud-body {
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--ink-mid);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Adviser Gap */
+.adviser-gap {
+  padding: 2.5rem 3rem;
+  background: var(--ink);
+}
+
+.ag-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(191, 150, 92, 0.55);
+  margin-bottom: 1rem;
+}
+
+.ag-quote {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  color: #dce8f5;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.ag-quote em {
+  color: var(--gold);
+}
+
+.ag-body {
+  font-size: 13px;
+  line-height: 1.85;
+  color: rgba(220, 232, 245, 0.5);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Family CTA */
+.fam-cta {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.5px solid var(--line);
+}
+
+.fam-cta p {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Property */
+.prop-hero {
+  padding: 3.5rem 3rem 2.5rem;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.prop-kicker {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.prop-title {
+  font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.prop-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.prop-intro {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  max-width: 580px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.prop-position {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--gold);
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.prop-position em {
+  color: var(--ink);
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 0.5px solid var(--line);
+}
+
+.service {
+  padding: 2.5rem 2.5rem;
+  border-right: 0.5px solid var(--line);
+  border-bottom: 0.5px solid var(--line);
+  transition: background 0.2s;
+}
+
+.service:nth-child(even) {
+  border-right: none;
+}
+
+.service:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.service:hover {
+  background: rgba(191, 150, 92, 0.03);
+}
+
+.svc-num {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--gold-lt);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.svc-title {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+  margin: 0 0 0.6rem 0;
+}
+
+.svc-body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  margin: 0 0 1.2rem 0;
+}
+
+.svc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.svc-detail {
+  font-size: 11px;
+  color: var(--ink-soft);
+  padding: 6px 0;
+  border-bottom: 0.5px solid var(--line);
+  line-height: 1.4;
+}
+
+.svc-detail:last-child {
+  border-bottom: none;
+}
+
+.svc-detail strong {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1px;
+  font-weight: 500;
+}
+
+/* Property Nod */
+.prop-nod {
+  padding: 2.5rem 3rem;
+  background: var(--gold-pale);
+  border-top: 0.5px solid var(--line);
+}
+
+.pn-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.pn-text {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0;
+}
+
+.pn-text em {
+  color: var(--gold);
+}
+
+/* Property CTA */
+.prop-cta {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.5px solid var(--line);
+}
+
+.prop-cta p {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Letters */
+.letters-hero {
+  padding: 3.5rem 3rem 2.5rem;
+  border-bottom: 0.5px solid var(--line);
+}
+
+.letters-kicker {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.letters-title {
+  font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.letters-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.letters-intro {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  max-width: 540px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 0.5px solid var(--line);
+}
+
+.letter-card {
+  padding: 3rem 2.8rem;
+  border-right: 0.5px solid var(--line);
+}
+
+.letter-card:last-child {
+  border-right: none;
+}
+
+.letter-card.dark {
+  background: var(--ink);
+}
+
+.letter-card.light {
+  background: var(--cream);
+}
+
+.lc-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.dark .lc-label {
+  color: rgba(191, 150, 92, 0.55);
+}
+
+.light .lc-label {
+  color: var(--gold);
+}
+
+.lc-salutation {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.5px solid;
+}
+
+.dark .lc-salutation {
+  color: rgba(191, 150, 92, 0.5);
+  border-bottom-color: rgba(191, 150, 92, 0.15);
+}
+
+.light .lc-salutation {
+  color: var(--ink-soft);
+  border-bottom-color: var(--line);
+}
+
+.lc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.lc-body p {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.dark .lc-body p {
+  color: rgba(220, 232, 245, 0.6);
+}
+
+.light .lc-body p {
+  color: var(--ink-mid);
+}
+
+.dark .lc-body em {
+  color: rgba(220, 232, 245, 0.85);
+}
+
+.light .lc-body em {
+  color: var(--ink);
+}
+
+.lc-gold {
+  font-style: normal;
+  color: #dce8f5;
+}
+
+.lc-gold-light {
+  font-style: normal;
+  color: var(--ink);
+}
+
+.lc-close {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.dark .lc-close {
+  color: rgba(191, 150, 92, 0.4);
+}
+
+.light .lc-close {
+  color: var(--ink-soft);
+}
+
+.lc-sig {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.lc-cta {
+  padding-top: 1.5rem;
+  border-top: 0.5px solid;
+}
+
+.dark .lc-cta {
+  border-top-color: rgba(191, 150, 92, 0.15);
+}
+
+.light .lc-cta {
+  border-top-color: var(--line);
+}
+
+.lc-btn {
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.lc-btn:hover {
+  background: var(--gold-lt);
+}
+
+.lc-btn-dark {
+  background: var(--ink);
+  color: var(--gold-lt);
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.lc-btn-dark:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Letters Footer */
+.letters-footer {
+  padding: 2rem 3rem;
+  border-top: 0.5px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lf-text {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Container Full Width Helper */
+.container-full {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-left > * {
+  animation: fadeUp 0.7s ease both;
+}
+
+.hero-left .overline {
+  animation-delay: 0.05s;
+}
+
+.hero-left .headline {
+  animation-delay: 0.15s;
+}
+
+.hero-left .subhead {
+  animation-delay: 0.25s;
+}
+
+.hero-left .eight-words {
+  animation-delay: 0.35s;
+}
+
+.hero-left .cta-row {
+  animation-delay: 0.45s;
+}
+
+.hero-right .passport-card {
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
 @media (max-width: 920px) {
   .site-nav {
     gap: 0.65rem;
@@ -1806,6 +3064,313 @@ textarea:focus {
 
   .tool-workspace__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Seanagh Fannin Pages - Mobile Responsive */
+
+  /* Landing Page */
+  .seanagh-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .overline {
+    font-size: 12px;
+  }
+
+  .headline {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .subhead {
+    font-size: 16px;
+  }
+
+  .eight-words {
+    font-size: 24px;
+  }
+
+  /* Brand Position */
+  .brand-position {
+    padding: 2rem 1.5rem;
+  }
+
+  .bp-label {
+    font-size: 11px;
+  }
+
+  .bp-text {
+    font-size: 16px;
+  }
+
+  /* Pillars */
+  .pillars {
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .pillar {
+    padding: 1.5rem;
+  }
+
+  .pillar-num {
+    font-size: 48px;
+  }
+
+  /* Footer Bar */
+  .footer-bar {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* How It Works Page */
+  .hiw-hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .hiw-kicker {
+    font-size: 11px;
+  }
+
+  .hiw-title {
+    font-size: 32px;
+  }
+
+  .hiw-intro {
+    font-size: 16px;
+  }
+
+  .hiw-preamble {
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .hiw-p-block {
+    padding: 1rem;
+  }
+
+  .hiw-p-who {
+    font-size: 13px;
+  }
+
+  .hiw-p-text {
+    font-size: 14px;
+  }
+
+  .stages {
+    padding: 2rem 1.5rem;
+  }
+
+  .stage {
+    padding: 1.5rem;
+  }
+
+  .stage-num {
+    font-size: 36px;
+  }
+
+  .stage-body {
+    font-size: 14px;
+  }
+
+  .detail-chip {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .promise-strip {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .promise-item {
+    padding: 0;
+  }
+
+  .promise-label {
+    font-size: 12px;
+  }
+
+  .promise-text {
+    font-size: 14px;
+  }
+
+  .hiw-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  /* For Families Page */
+  .fam-hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .fam-title {
+    font-size: 32px;
+  }
+
+  .fam-eight {
+    font-size: 24px;
+  }
+
+  .audiences {
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .audience {
+    padding: 1.5rem;
+  }
+
+  .aud-tag {
+    font-size: 11px;
+  }
+
+  .aud-heading {
+    font-size: 16px;
+  }
+
+  .aud-body {
+    font-size: 14px;
+  }
+
+  .adviser-gap {
+    padding: 2rem 1.5rem;
+  }
+
+  .ag-quote {
+    font-size: 18px;
+  }
+
+  .ag-body {
+    font-size: 14px;
+  }
+
+  .fam-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Property Page */
+  .prop-hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .prop-title {
+    font-size: 32px;
+  }
+
+  .prop-intro,
+  .prop-position {
+    font-size: 14px;
+  }
+
+  .services {
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .service {
+    padding: 1.5rem;
+  }
+
+  .svc-num {
+    font-size: 36px;
+  }
+
+  .svc-title {
+    font-size: 16px;
+  }
+
+  .svc-body {
+    font-size: 14px;
+  }
+
+  .svc-detail {
+    font-size: 13px;
+  }
+
+  .prop-nod {
+    padding: 2rem 1.5rem;
+  }
+
+  .pn-label {
+    font-size: 11px;
+  }
+
+  .pn-text {
+    font-size: 16px;
+  }
+
+  .prop-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Letters Page */
+  .letters-hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .letters-title {
+    font-size: 32px;
+  }
+
+  .letters-intro {
+    font-size: 14px;
+  }
+
+  .letters-grid {
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .letter-card {
+    padding: 2rem;
+  }
+
+  .lc-label {
+    font-size: 11px;
+  }
+
+  .lc-salutation {
+    font-size: 14px;
+  }
+
+  .lc-body p {
+    font-size: 14px;
+  }
+
+  .lc-close {
+    font-size: 14px;
+  }
+
+  .lc-sig {
+    font-size: 16px;
+  }
+
+  .letters-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .lf-text {
+    font-size: 14px;
+  }
+
+  .container,
+  .container-full {
+    padding: 0 1.5rem;
   }
 }
 
