@@ -32,7 +32,7 @@ function PodcastAudioFrame({ src, label }: { src: string; label: string }) {
 
 function BookGardenRouteLink({ className }: { className?: string }) {
   return (
-    <Link className={className} to="/booking">
+    <Link className={className} to="/booking?source=carrick">
       Book with Garden Route
     </Link>
   );
@@ -141,7 +141,7 @@ export function WealthyHerPodcastPage() {
             <p className="wh-host">— {podcastWelcome.host}</p>
             <p className="wh-footnote">
               Episode summaries support education only. For personal advice, speak with a Garden Route wealth manager—start from{" "}
-              <Link className="text-link" to="/booking">
+              <Link className="text-link" to="/booking?source=carrick">
                 Book a consultation
               </Link>{" "}
               or explore{" "}
@@ -182,7 +182,7 @@ export function WealthyHerPodcastPage() {
               <Link className="btn btn-secondary" to="/resources">
                 More resources
               </Link>
-              <Link className="btn btn-primary" to="/booking">
+              <Link className="btn btn-primary" to="/booking?source=carrick">
                 Book consultation
               </Link>
             </div>

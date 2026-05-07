@@ -215,7 +215,7 @@ export function MoneyIsBlock() {
                 <br />
                 <strong>Together</strong> we&apos;ll get you there.
               </p>
-              <Link className="money-block__cta" to="/booking">
+              <Link className="money-block__cta" to="/booking?source=carrick">
                 Contact us
               </Link>
             </div>

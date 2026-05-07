@@ -281,7 +281,7 @@ export function WealthJourneyPage() {
                       </div>
                     </div>
                     <div className="journey-destination__actions">
-                      <Link className="btn btn-primary" to="/booking">Book consultation</Link>
+                      <Link className="btn btn-primary" to="/booking?source=carrick">Book consultation</Link>
                       <Link className="text-link journey-destination__link" to="/resources">View resources</Link>
                     </div>
                   </div>
@@ -345,7 +345,7 @@ export function WealthJourneyPage() {
                       </button>
                     )}
                     {stageEngaged && isLastStage && (
-                      <Link className="btn btn-primary" to="/booking">
+                      <Link className="btn btn-primary" to="/booking?source=carrick">
                         Book your consultation →
                       </Link>
                     )}

@@ -49,7 +49,7 @@ export function LandingPage() {
                   Why Carrick
                 </Link>
                 {" · "}
-                <Link to="/booking" className="text-link">
+                <Link to="/booking?source=carrick" className="text-link">
                   Speak to a Wealth Manager
                 </Link>
               </p>
@@ -110,7 +110,7 @@ export function LandingPage() {
         <section className="cta section" aria-labelledby="cta-heading">
           <div className="container cta-wrap">
             <h2 id="cta-heading">Ready to make your money work harder for your goals?</h2>
-            <Link className="btn btn-primary" to="/booking">
+            <Link className="btn btn-primary" to="/booking?source=carrick">
               Book Your Consultation
             </Link>
           </div>

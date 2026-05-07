@@ -3372,6 +3372,425 @@ textarea:focus {
   .container-full {
     padding: 0 1.5rem;
   }
+
+  /* Seanagh Booking Form - Mobile */
+  .sb-hero {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .sb-title {
+    font-size: 28px;
+  }
+
+  .sb-eight {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 16px;
+  }
+
+  .sb-body {
+    font-size: 14px;
+  }
+
+  .sb-form-section {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .sb-progress {
+    margin-bottom: 2rem;
+  }
+
+  .sb-step-label {
+    display: none;
+  }
+
+  .sb-step-title {
+    font-size: 22px;
+  }
+
+  .sb-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-radio-group {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-confirm {
+    padding: 2rem 1.5rem;
+  }
+
+  .sb-confirm-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Seanagh Booking Form
+───────────────────────────────────────────────────────── */
+
+.sb-hero {
+  padding: 4rem 3rem 2rem;
+  background: var(--cream);
+  border-bottom: 0.5px solid var(--line);
+}
+
+.sb-tag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+}
+
+.sb-kicker {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+
+.sb-title {
+  font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 1.5rem;
+  max-width: 640px;
+}
+
+.sb-eight {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.sb-eight .her {
+  color: var(--gold);
+}
+
+.sb-eight .him {
+  color: var(--ink-soft);
+}
+
+.sb-body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-mid);
+  max-width: 600px;
+  margin: 0 0 1.5rem;
+}
+
+.sb-assurance {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.sb-assurance li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.sb-assurance li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Form Section */
+.sb-form-section {
+  padding: 3rem 3rem 5rem;
+  background: #fff;
+}
+
+/* Progress Indicator */
+.sb-progress {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3rem;
+  padding: 0;
+  position: relative;
+  max-width: 720px;
+}
+
+.sb-progress::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+
+.sb-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0 0.5rem;
+}
+
+.sb-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: #fff;
+}
+
+.sb-step.current .sb-step-num {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+
+.sb-step.done .sb-step-num {
+  background: var(--ink);
+  color: var(--gold-lt);
+  border-color: var(--ink);
+}
+
+.sb-step-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-family: 'Roboto', sans-serif;
+}
+
+.sb-step.current .sb-step-label {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Form */
+.sb-form {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sb-step-content {
+  margin-bottom: 2rem;
+}
+
+.sb-step-title {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+
+.sb-step-intro {
+  font-size: 15px;
+  color: var(--ink-mid);
+  margin: 0 0 1.5rem;
+}
+
+.sb-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.sb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.sb-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.sb-field input,
+.sb-field select,
+.sb-field textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.sb-field input:focus,
+.sb-field select:focus,
+.sb-field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.sb-field textarea {
+  resize: vertical;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Checkboxes */
+.sb-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sb-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--ink-mid);
+  transition: all 0.2s;
+}
+
+.sb-checkbox:hover {
+  border-color: var(--gold);
+  background: var(--gold-pale);
+}
+
+.sb-checkbox.checked {
+  border-color: var(--gold);
+  background: var(--gold-pale);
+  color: var(--ink);
+}
+
+.sb-checkbox input {
+  accent-color: var(--gold);
+}
+
+/* Radio Buttons */
+.sb-radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+}
+
+.sb-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--ink-mid);
+  transition: all 0.2s;
+}
+
+.sb-radio:hover {
+  border-color: var(--gold);
+}
+
+.sb-radio.checked {
+  border-color: var(--gold);
+  background: var(--gold-pale);
+  color: var(--ink);
+}
+
+.sb-radio input {
+  accent-color: var(--gold);
+}
+
+/* Actions */
+.sb-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid var(--line);
+}
+
+.sb-actions .btn-ghost,
+.sb-actions .btn-primary {
+  margin-left: 0;
+}
+
+.sb-actions .btn-primary {
+  margin-left: auto;
+}
+
+/* Confirmation */
+.sb-confirm {
+  padding: 4rem 3rem;
+  background: var(--cream);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.sb-confirm-card {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  border: 0.5px solid var(--line);
+}
+
+.sb-confirm-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  color: var(--gold);
+}
+
+.sb-confirm-title {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--ink);
+  margin: 0 0 1rem;
+}
+
+.sb-confirm-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-mid);
+  margin: 0 0 2rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

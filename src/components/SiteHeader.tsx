@@ -47,7 +47,7 @@ export function SiteHeader({ anchorToLanding = false }: SiteHeaderProps) {
             </>
           )}
         </nav>
-        <Link className="btn btn-primary nav-cta" to="/booking">
+        <Link className="btn btn-primary nav-cta" to={isSeanagh ? "/booking" : "/booking?source=carrick"}>
           Book {isSeanagh ? "Conversation" : "Consultation"}
         </Link>
       </div>

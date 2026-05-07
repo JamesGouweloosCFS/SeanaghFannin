@@ -81,7 +81,7 @@ export function ResourcesPage() {
               <li>Aligning investments with time horizons and cash needs</li>
             </ul>
             <p className="page-lead page-stack">
-              <Link to="/booking" className="text-link">
+              <Link to="/booking?source=carrick" className="text-link">
                 Ask us when the next cohort opens
               </Link>
             </p>
@@ -99,7 +99,7 @@ export function ResourcesPage() {
               outputs with a conversation so assumptions match your real tax position and lifestyle.
             </p>
             <p className="page-lead page-stack">
-              <Link to="/booking" className="btn btn-primary">
+              <Link to="/booking?source=carrick" className="btn btn-primary">
                 Book a consultation
               </Link>
             </p>

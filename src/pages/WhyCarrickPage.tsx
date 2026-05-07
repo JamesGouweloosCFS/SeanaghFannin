@@ -52,7 +52,7 @@ export function WhyCarrickPage() {
                 choices you understand and own.
               </p>
               <p className="script">Wealth is your next chapter.</p>
-              <Link to="/booking" className="btn btn-primary">
+              <Link to="/booking?source=carrick" className="btn btn-primary">
                 Book a consultation
               </Link>
             </div>

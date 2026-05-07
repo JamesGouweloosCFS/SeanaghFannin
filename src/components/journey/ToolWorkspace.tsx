@@ -962,7 +962,7 @@ export function AdvisorBrief({ profile, onClose }: BriefProps) {
       </div>
 
       <div className="advisor-brief__footer">
-        <Link className="btn btn-primary" to="/booking">
+        <Link className="btn btn-primary" to="/booking?source=carrick">
           Book my consultation
         </Link>
         <p className="advisor-brief__note">
